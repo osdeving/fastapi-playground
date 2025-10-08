@@ -28,20 +28,18 @@ n = 0
 while True:
     question = questions[n]
 
-    print(question['question'])
-
-    print()
+    print(question['question'], '\n')
 
     [print(opt) for opt in question['options']]
 
-    answer = input('Escolha uma opção e aperte enter: ')
+    answer = input('\nEscolha uma opção e aperte enter: ')
 
     if answer.lower() == 'q':
         break
 
     n = (n + 1) % num_of_questions
 
-print(f'Você acertou {correct} perguntas de {num_of_questions}!')
+print(f'\nVocê acertou {correct} perguntas de {num_of_questions}!')
 
 
 

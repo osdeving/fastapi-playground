@@ -37,8 +37,8 @@ while True:
     if answer == 'q':
         break
 
-    idx = ord(answer) - ord('a') # transforma a resposta de Letra para Indice na lista de options.
-    chosen = question['options'][idx] # precisa validar, quebra para qualquer coisa que não seja a,b,c,d,e
+    idx = ord(answer) - ord('a')
+    chosen = question['options'][idx]
 
     if chosen == question['answer']:
         correct += 1

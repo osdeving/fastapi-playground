@@ -30,7 +30,7 @@ while True:
 
     print(question['question'], '\n')
 
-    [print(f"{chr(65+i)}) {opt}) {opt}") for i, opt in enumerate(question["options"])]
+    [print(f"{chr(65+i)}) {opt}") for i, opt in enumerate(question["options"])]
 
     answer = input('\nEscolha uma opção e aperte enter: ')
 

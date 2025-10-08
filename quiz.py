@@ -21,12 +21,12 @@ questions = [
     },
 ]
 
-num_of_questions = len(questions)
-correct = 0
-n = 0
+number_of_questions = len(questions)
+correct_answers = 0
+actual_question = 0
 
 while True:
-    question = questions[n]
+    question = questions[actual_question]
 
     print('\n', question['question'], '\n')
 
@@ -37,16 +37,17 @@ while True:
     if answer == 'q':
         break
 
-    idx = ord(answer) - ord('a')
-    chosen = question['options'][idx]
+    chosen = question['options'][ord(answer) - ord('a')]
 
     if chosen == question['answer']:
-        correct += 1
+        correct_answers += 1
         print("✅ Correto!")
+    else:
+        print("❌ Errado!")
 
-    n = (n + 1) % num_of_questions
+    actual_question = (actual_question + 1) % number_of_questions
 
-print(f'\nVocê acertou {correct} perguntas de {num_of_questions}!')
+print(f'\nVocê acertou {correct_answers} perguntas de {number_of_questions}!')
 
 
 

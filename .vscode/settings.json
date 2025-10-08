@@ -1,3 +1,20 @@
 {
-    "gitdoc.enabled": true
+    "gitdoc.enabled": true,
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        "**/__pycache__/": true,
+        "**/.pytest_cache/": true,
+        "**/.mypy_cache/": true,
+        "**/.venv/": true,
+        "**/.ruff_cache/": true,
+        "**/.python-version": true,
+        "**/uv.lock": true,
+        "**/.gitignore": true,
+        "**/Flashpost-tests": true
+    },
+    "explorerExclude.backup": {}
 }

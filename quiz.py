@@ -28,14 +28,21 @@ n = 0
 while True:
     question = questions[n]
 
-    print(question['question'], '\n')
+    print('\n', question['question'], '\n')
 
     [print(f"{chr(65+i)}) {opt}") for i, opt in enumerate(question["options"])]
 
-    answer = input('\nEscolha uma opção e aperte enter: ')
+    answer = input('\nEscolha uma opção e aperte enter: ').lower()
 
-    if answer.lower() == 'q':
+    if answer == 'q':
         break
+
+    idx = ord(answer) - ord('a') # transforma a resposta de Letra para Indice na lista de options.
+    chosen = question['options'][idx] # precisa validar, quebra para qualquer coisa que não seja a,b,c,d,e
+
+    if chosen == question['answer']:
+        correct += 1
+        print("✅ Correto!")
 
     n = (n + 1) % num_of_questions
 

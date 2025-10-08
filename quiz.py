@@ -33,7 +33,7 @@ while True:
     if answer.lower() == 'q':
         break
 
-    n = num_of_questions % n + 1
+    n = num_of_questions % (n + 1) + 1
 
 print(f'Você acertou {correct} perguntas de {num_of_questions}!')
 

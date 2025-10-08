@@ -31,7 +31,7 @@ while True:
     print('\n', question['question'], '\n')
 
     for char_code, option in enumerate(question['options'], start=65):
-        print(f'{char_code} {option}')
+        print(f'{chr(char_code)}) {option}')
 
     answer = input('\nEscolha uma opção e aperte enter: ').lower()
 
